@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="601.0" prefWidth="1004.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.project.dimotocicloapi.adapters.controllers.ProdutosView">
+    <children>
+        <TabPane cache="true" layoutX="17.0" layoutY="7.0" prefHeight="540.0" prefWidth="970.0" rotateGraphic="true" tabClosingPolicy="ALL_TABS">
+            <tabs>
+                <Tab text="Registro">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="513.0" prefWidth="970.0">
+                            <AnchorPane layoutX="7.0" layoutY="2.0" prefHeight="520.0" prefWidth="961.0">
+                                <children>
+                                    <TextField fx:id="codigoBarrasEan" layoutX="14.0" layoutY="40.0" prefHeight="25.0" prefWidth="160.0" promptText="Codigo de Barras EAN">
+                                        <font>
+                                            <Font size="10.0" />
+                                        </font>
+                                    </TextField>
+                                    <TextField fx:id="codigoBarrasInterno" layoutX="196.0" layoutY="40.0" prefHeight="25.0" prefWidth="146.0" promptText="Codigo interno">
+                                        <font>
+                                            <Font size="10.0" />
+                                        </font>
+                                    </TextField>
+                                    <TextField fx:id="descricaoProduto" layoutX="13.0" layoutY="99.0" prefHeight="25.0" prefWidth="277.0" promptText="Descrição"  >
+                                        <font>
+                                            <Font size="10.0" />
+                                        </font>
+                                    </TextField>
+                                    <TextField fx:id="referenciaProduto" layoutX="15.0" layoutY="241.0" prefHeight="25.0" prefWidth="259.0" promptText="Referencia">
+                                        <font>
+                                            <Font size="10.0" />
+                                        </font>
+                                    </TextField>
+                                    <TextField fx:id="marcaProduto" layoutX="14.0" layoutY="157.0" prefHeight="25.0" prefWidth="213.0" promptText="Marca">
+                                        <font>
+                                            <Font size="10.0" />
+                                        </font>
+                                    </TextField>
+                                    <Label layoutX="14.0" layoutY="14.0" text="Codigo de Barras" textFill="#804039">
+                                        <font>
+                                            <Font name="Calibri" size="12.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="14.0" layoutY="74.0" text="Descrição" textFill="#804039">
+                                        <font>
+                                            <Font name="Calibri" size="12.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="16.0" layoutY="220.0" text="Referencia" textFill="#804039">
+                                        <font>
+                                            <Font name="Calibri" size="12.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="15.0" layoutY="135.0" text="Marca Produto" textFill="#804039">
+                                        <font>
+                                            <Font name="Calibri" size="12.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="310.0" layoutY="74.0" text="Fornecedor" textFill="#804039">
+                                        <font>
+                                            <Font name="Calibri" size="12.0" />
+                                        </font>
+                                    </Label>
+                                    <Label layoutX="196.0" layoutY="14.0" text="Codigo Interno" textFill="#804039">
+                                        <font>
+                                            <Font name="Calibri" size="12.0" />
+                                        </font>
+                                    </Label>
+                                    <ComboBox fx:id="tipoProduto" cache="true" editable="true" layoutX="15.0" layoutY="188.0" prefHeight="25.0" prefWidth="212.0" />
+                                    <RadioButton fx:id="rdAtivo" layoutX="822.0" layoutY="20.0" mnemonicParsing="false" text="Ativo" />
+                                    <RadioButton fx:id="rdInativo" layoutX="890.0" layoutY="20.0" mnemonicParsing="false" text="Inativo" />
+                                    <SplitMenuButton layoutX="302.0" layoutY="99.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="168.0">
+                                        <items>
+                                            <MenuItem mnemonicParsing="false" text="Action 1" />
+                                            <MenuItem mnemonicParsing="false" text="Action 2" />
+                                        </items>
+                                    </SplitMenuButton>
+                                    <DatePicker layoutX="625.0" layoutY="16.0" />
+                                    <TitledPane layoutX="499.0" layoutY="310.0" prefHeight="77.0" prefWidth="405.0" text="Imagem" underline="true">
+                                        <content>
+                                            <ImageView fx:id="imagemView" fitHeight="146.0" fitWidth="392.0" pickOnBounds="true" preserveRatio="true" />
+                                        </content>
+                                    </TitledPane>
+                                    <TextField fx:id="urlImagem" layoutX="501.0" layoutY="278.0" prefHeight="25.0" prefWidth="339.0" promptText="url_imagen" />
+                                    <Button fx:id="btnUrlImagen" layoutX="844.0" layoutY="278.0" mnemonicParsing="false" onAction="#carregarUrlArquivos" prefHeight="25.0" prefWidth="59.0" text="..." />
+                                    <ScrollPane layoutX="21.0" layoutY="278.0" prefHeight="237.0" prefWidth="450.0">
+                                        <content>
+                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="256.0" prefWidth="445.0">
+                                                <children>
+                                                    <TextField fx:id="quantidadeEstoqueProduto" layoutX="2.0" layoutY="37.0" prefHeight="25.0" prefWidth="115.0" promptText="0">
+                                                        <font>
+                                                            <Font size="10.0" />
+                                                        </font>
+                                                    </TextField>
+                                                    <Label layoutX="7.0" layoutY="25.0" text="Estoque" textFill="#804039">
+                                                        <font>
+                                                            <Font name="Calibri" size="12.0" />
+                                                        </font>
+                                                    </Label>
+                                                    <TextField fx:id="valorVendaProduto" layoutX="299.0" layoutY="88.0" prefHeight="25.0" prefWidth="111.0" promptText="R$0,00" />
+                                                    <Label layoutX="300.0" layoutY="70.0" prefHeight="23.0" prefWidth="108.0" text="Valor Venda Varejo" textFill="#804039">
+                                                        <font>
+                                                            <Font name="Calibri" size="12.0" />
+                                                        </font>
+                                                    </Label>
+                                                    <Label layoutX="148.0" layoutY="23.0" text="Estoque Min" />
+                                                    <Label layoutX="301.0" layoutY="23.0" text="Estoque Max" />
+                                                    <TextField fx:id="estoqueMin" layoutX="147.0" layoutY="37.0" prefHeight="25.0" prefWidth="90.0" promptText="0" />
+                                                    <TextField fx:id="estoqueMax" layoutX="298.0" layoutY="37.0" prefHeight="25.0" prefWidth="113.0" promptText="0" />
+                                                    <TextField fx:id="margenValorVendaVarejo" layoutX="1.0" layoutY="90.0" prefHeight="25.0" prefWidth="116.0" promptText="\%" />
+                                                    <TextField fx:id="margemVendaAtacado" layoutX="1.0" layoutY="146.0" prefHeight="25.0" prefWidth="113.0" promptText="\%" />
+                                                    <TextField fx:id="valorLucroVendaVarejo" layoutX="148.0" layoutY="90.0" prefHeight="25.0" prefWidth="91.0" promptText="R$0,00" />
+                                                    <TextField fx:id="valorLucroAtacado" layoutX="147.0" layoutY="144.0" prefHeight="25.0" prefWidth="93.0" promptText="R$0,00" />
+                                                    <TextField fx:id="valorVendaAtacado" layoutX="297.0" layoutY="143.0" prefHeight="25.0" prefWidth="113.0" promptText="R$0,00" />
+                                                    <Label layoutX="7.0" layoutY="73.0" text="\% Valor Varejo" />
+                                                    <Label layoutX="2.0" layoutY="126.0" text="\% Valor Venda Atacado" />
+                                                    <Label layoutX="145.0" layoutY="73.0" text="Valor Lucro Varejo" />
+                                                    <Label layoutX="301.0" layoutY="128.0" text="Valor Venda Atacado" />
+                                                    <Label layoutX="147.0" layoutY="126.0" text="Valor Lucro Atacado" />
+                                                    <CheckBox fx:id="controleEstoque" layoutX="11.0" layoutY="6.0" mnemonicParsing="false" text="Controle de estoque" />
+                                                    <Label layoutY="179.0" text="Valor Compra" />
+                                                    <TextField fx:id="valorCompra" layoutX="2.0" layoutY="196.0" prefHeight="15.0" prefWidth="110.0" promptText="R$0,00" />
+                                                </children>
+                                            </AnchorPane>
+                                        </content>
+                                    </ScrollPane>
+                                    <Group layoutX="799.0" layoutY="99.0" />
+                                    <Button fx:id="btnGerarCodigo" layoutX="360.0" layoutY="40.0" mnemonicParsing="false" onAction="#gerarCodigoBarras" prefHeight="25.0" prefWidth="75.0" text="Gerar Codigo">
+                                        <font>
+                                            <Font size="10.0" />
+                                        </font>
+                                    </Button>
+                                </children>
+                                <effect>
+                                    <Blend mode="LIGHTEN" />
+                                </effect>
+                            </AnchorPane>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Fracionamento">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <BorderPane layoutX="7.0" prefHeight="338.0" prefWidth="963.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <ButtonBar layoutX="631.0" layoutY="547.0" prefHeight="40.0" prefWidth="359.0">
+            <buttons>
+                <Button fx:id="btnPesquisar" mnemonicParsing="false" text="Pesquisar" />
+                <Button fx:id="btnDeletar" mnemonicParsing="false" text="Deletar" />
+                <Button fx:id="btnNovo" mnemonicParsing="false" onAction="#salvarProdutos" text="Novo" />
+            </buttons>
+        </ButtonBar>
+    </children>
+</AnchorPane>
