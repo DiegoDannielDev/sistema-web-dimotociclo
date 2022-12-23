@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="472.0" prefWidth="747.0" xmlns="http://javafx.com/javafx/16"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="br.com.project.dimotocicloapi.adapters.controllers.LoginView">
+    <children>
+        <AnchorPane layoutX="363.0" layoutY="42.0" prefHeight="398.0" prefWidth="351.0">
+            <children>
+                <TextField fx:id="textField" layoutX="51.0" layoutY="115.0" prefHeight="25.0" prefWidth="242.0"
+                           promptText="user/email"/>
+                <PasswordField fx:id="passwordField" layoutX="51.0" layoutY="174.0" onAction="#login" prefHeight="25.0"
+                               prefWidth="242.0" promptText="password"/>
+                <Button layoutX="51.0" layoutY="223.0" onAction="#login" prefHeight="25.0" prefWidth="242.0"
+                        text="Button"/>
+                <Hyperlink fx:id="passwordIn" layoutX="194.0" layoutY="140.0" onAction="#recuperarSenha"
+                           prefHeight="23.0" prefWidth="99.0" text="Esqueceu a senha ?">
+                    <font>
+                        <Font name="System Italic" size="10.0"/>
+                    </font>
+                </Hyperlink>
+                <Label layoutX="51.0" layoutY="55.0" prefHeight="17.0" prefWidth="147.0" text="Sing in">
+                    <font>
+                        <Font name="System Bold Italic" size="23.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="textErro" layoutX="51.0" layoutY="308.0" text="Label"/>
+            </children>
+            <effect>
+                <Glow level="0.45"/>
+            </effect>
+        </AnchorPane>
+    </children>
+
+</AnchorPane>
