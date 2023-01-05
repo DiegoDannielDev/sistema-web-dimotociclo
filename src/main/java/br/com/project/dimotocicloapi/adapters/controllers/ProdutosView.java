@@ -1,15 +1,14 @@
 package br.com.project.dimotocicloapi.adapters.controllers;
 
 import br.com.project.dimotocicloapi.HelloApplication;
-import br.com.project.dimotocicloapi.adapters.rest.impl.ProdutoRestImpl;
-import br.com.project.dimotocicloapi.adapters.rest.request.ProdutoRequest;
-import br.com.project.dimotocicloapi.adapters.rest.request.Validations;
+import br.com.project.dimotocicloapi.adapters.resttemplate.impl.ProdutoRestImpl;
+import br.com.project.dimotocicloapi.adapters.resttemplate.request.ProdutoRequest;
+import br.com.project.dimotocicloapi.adapters.resttemplate.request.Validations;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
@@ -22,7 +21,6 @@ import lombok.SneakyThrows;
 import org.controlsfx.control.Notifications;
 
 import java.io.File;
-import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +31,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class ProdutosView implements Initializable {
 
-  private final ProdutoRestImpl produtoRest = new ProdutoRestImpl();
+  private final ProdutoRestImpl produtoRestImpl = new ProdutoRestImpl();
   @FXML private static final Stage stage = new Stage();
   @FXML public ComboBox<String> tipoProduto;
   @FXML public TextField codigoBarrasEan;
@@ -107,7 +105,7 @@ public class ProdutosView implements Initializable {
                 .msg("Quantidade para estoque ")
                 .build()));
 
-    produtoRest.salvarProdutosApi(
+    produtoRestImpl.salvarProdutosApi(
         ProdutoRequest.builder()
             .codigoBarras(codigoBarrasEan.getText())
             .codigoBarrasInterno(codigoBarrasInterno.getText())

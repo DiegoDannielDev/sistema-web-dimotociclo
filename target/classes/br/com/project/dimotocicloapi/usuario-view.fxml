@@ -3,47 +3,25 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="471.0" prefWidth="589.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.project.dimotocicloapi.adapters.controllers.UsuarioView">
+<AnchorPane prefHeight="284.0" prefWidth="748.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.project.dimotocicloapi.adapters.controllers.UsuarioView">
     <children>
-        <BorderPane layoutX="7.0" layoutY="414.0" prefHeight="43.0" prefWidth="576.0">
-            <right>
-                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Excluir" BorderPane.alignment="CENTER" />
-            </right>
-            <center>
-                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Cancelar" BorderPane.alignment="CENTER" />
-            </center>
-            <left>
-                <Button mnemonicParsing="false" onAction="#salvarUsuario" prefHeight="25.0" prefWidth="100.0" text="Gravar" BorderPane.alignment="CENTER" />
-            </left>
-        </BorderPane>
-        <Accordion layoutX="7.0" layoutY="10.0">
-            <panes>
-                <TitledPane animated="false" prefHeight="267.0" prefWidth="460.0" text="Cadastrar">
-                    <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="219.0" prefWidth="542.0">
-                            <children>
-                                <TextField fx:id="id" layoutX="14.0" layoutY="2.0" prefHeight="25.0" prefWidth="48.0" promptText="ID" />
-                                <TextField fx:id="nome" layoutX="14.0" layoutY="35.0" prefHeight="25.0" prefWidth="241.0" promptText="Nome" />
-                                <TextField fx:id="login" layoutX="14.0" layoutY="69.0" prefHeight="25.0" prefWidth="241.0" promptText="Login" />
-                                <PasswordField fx:id="password" layoutX="14.0" layoutY="107.0" prefHeight="25.0" prefWidth="241.0" promptText="Password" />
-                                <TextField fx:id="telefone" layoutX="14.0" layoutY="145.0" prefHeight="25.0" prefWidth="241.0" promptText="Telefone" />
-                                <TextField fx:id="email" layoutX="14.0" layoutY="186.0" prefHeight="25.0" prefWidth="241.0" promptText="E-mail" />
-                        <Label fx:id="sucess"  layoutX="445.0" layoutY="219.0" prefHeight="17.0" prefWidth="71.0" text="Label" />
-                            </children>
-                        </AnchorPane>
-                    </content>
-                </TitledPane>
-                <TitledPane animated="false" prefHeight="0.0" prefWidth="576.0" text="Permissões">
-                    <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="197.0" prefWidth="535.0" />
-                    </content>
-                </TitledPane>
-            </panes>
-        </Accordion>
-      <TableView fx:id="tabelaUsuario" editable="true" layoutX="11.0" layoutY="302.0" prefHeight="95.0" prefWidth="569.0">
-         <columns>
-            <TableColumn fx:id="columnNome" prefWidth="236.0" text="Nome" />
-            <TableColumn fx:id="columnLogin" prefWidth="332.0" text="Login" />
-         </columns></TableView>
+        <TitledPane animated="false" layoutX="11.0" layoutY="23.0" prefHeight="163.0" prefWidth="729.0" text="Cadastrar">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="137.0" prefWidth="741.0">
+                    <children>
+                        <TextField fx:id="id" editable="false" layoutX="14.0" layoutY="2.0" prefHeight="25.0" prefWidth="100.0" promptText="ID" />
+                        <TextField fx:id="nome" layoutX="14.0" layoutY="35.0" prefHeight="25.0" prefWidth="241.0" promptText="Nome" />
+                        <TextField fx:id="login" layoutX="264.0" layoutY="35.0" prefHeight="25.0" prefWidth="241.0" promptText="Login" />
+                        <PasswordField fx:id="password" layoutX="513.0" layoutY="35.0" prefHeight="25.0" prefWidth="160.0" promptText="Password" />
+                        <TextField fx:id="telefone" layoutX="264.0" layoutY="70.0" prefHeight="25.0" prefWidth="241.0" promptText="Telefone" />
+                        <TextField fx:id="email" layoutX="14.0" layoutY="70.0" prefHeight="25.0" prefWidth="241.0" promptText="E-mail" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </TitledPane>
+          <Button layoutX="257.0" layoutY="213.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Excluir" />
+          <Button layoutX="133.0" layoutY="213.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Cancelar" />
+          <Button layoutX="14.0" layoutY="213.0" mnemonicParsing="false" onAction="#salvarUsuario" prefHeight="25.0" prefWidth="100.0" text="Gravar" />
+            <Label fx:id="sucess" layoutX="556.0" layoutY="6.0" prefHeight="17.0" prefWidth="146.0" text="Label" />
     </children>
 </AnchorPane>
